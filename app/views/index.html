@@ -20,19 +20,48 @@
           </div>
         </div>
 
-        <p class="govuk-body">We have sent you a confirmation email.</p>
+        <p class="govuk-body">You have uploaded the following documents during 
+          this application.</p>
+          <ol class="app-task-list">
+            <li>
+              <h2 class="app-task-list__section">
+                <span class="app-task-list__section-number"> </span>
+              </h2>
+              <ul class="app-task-list__items">
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="eligibility-status">
+                      Passport
+                    </a>
+                  </span>
+                  <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                </li>
+                <li class="app-task-list__item">
+                  <span class="app-task-list__task-name">
+                    <a href="#" aria-describedby="read-declaration-status">
+                      Driving License
+                    </a>
+                  </span>
+                  <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="contact-details-status">In progress</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="list-convictions-status">
+                  Water Bill
+                </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            </li>
+          </ul>
+          </ol>
 
         <h2 class="govuk-heading-m">What happens next</h2>
 
         <p class="govuk-body">
-          We’ve sent your application to Hackney Electoral Register Office.
+          If you would like to store these for future services please
         </p>
         <p class="govuk-body">
-          They will contact you either to confirm your registration, or to ask for more information.
-        </p>
-
-        <p class="govuk-body">
-          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+          <a href="#" class="govuk-link">Create an account</a> 
         </p>
       </div>
     </div>
@@ -41,36 +70,23 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        You have uploaded the following documents during 
-        this application;
-        
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is the account service for ?
+          </span>
+        </summary>
+        <div class="govuk-details__text"> <ul>
+          <li> You can save uploaded documents on your account </li>
+          <li> Upload additional ID documents </li>
+          <li>Choose duration for documents to stay on system </li>
+          <li> Choose which service you would like your documents to have access to</li>
+        </ul>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
 
-      <h2 class="govuk-heading-m">About this page</h2>
+        </div>
+      </details>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          <a href="/docs/tutorials-and-examples">Tutorials and templates</a>
-        </li>
-        <li>
-          <a href="https://design-system.service.gov.uk">GOV.UK Design System</a>
-        </li>
-      </ul>
     </div>
   </div>
 
