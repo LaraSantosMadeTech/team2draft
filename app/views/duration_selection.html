@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <h1 class="govuk-heading-xl">Heading or question goes here</h1> -->
+
+      <form class="form" action="/check_answers" method="post">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How long would like your documents to be stored?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="14 days">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  14 days
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="1 month">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  1 month
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="3 month">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  3 month
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="6 month">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  6 month
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="12 month">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  12 month
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-long-to-store" name="how-long-to-store" type="radio" value="indefinitely">
+                <label class="govuk-label govuk-radios__label" for="how-long-to-store">
+                  Indefinitely
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >What happens to my details after this time?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          - Your details will be deleted off the system after 
+this period of time
+<br>- You can log back in and change the duration 
+at any point</br>
+        </div>
+      </details>
+    </div>
+  </div>
+
+{% endblock %}
